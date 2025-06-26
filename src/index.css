@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-gray-800 bg-white;
+  }
+
+  :root {
+    --color-primary: 77, 130, 79;
+    --color-primary-light: 97, 150, 99;
+  }
+}
+
+@layer components {
+  .container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply bg-primary text-white px-8 py-3 rounded-lg font-medium 
+    hover:bg-[rgb(var(--color-primary-light))] transition-colors duration-300 shadow-lg 
+    hover:shadow-xl active:scale-95 transform;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-primary mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-lg text-gray-600;
+  }
+}
+
+@layer utilities {
+  .text-primary {
+    color: rgb(var(--color-primary));
+  }
+
+  .bg-primary {
+    background-color: rgb(var(--color-primary));
+  }
+
+  .border-primary {
+    border-color: rgb(var(--color-primary));
+  }
+}
